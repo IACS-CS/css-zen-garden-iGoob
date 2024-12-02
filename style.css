@@ -17,33 +17,202 @@
 /* Typography */
 
 /* Get your own import URL from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-.page-wrapper {
-  /* Main font */
-  font-family: Poppins, sans-serif;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* Header font */
-  font-family: "Dancing Script", cursive;
+/*
+Started with copied CSS from  Seth Lupo 
+https://iacs-zen-garden.netlify.app/?authuser=0#seth-lupo-modernist-blocks
+*/
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-/* Background */
-#css-zen-garden {
-  background: linear-gradient(45deg, #f3f3f3 0%, #c8c8c8 100%);
+abbr[title] {
+  text-decoration: none;
 }
-/* Page wrapper */
+
+body {
+  font-family: ;
+  background-color: #a18d75;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1em;
+  text-align: center;
+  font-weight: 2;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+div[role="article"] h3 {
+  margin-left: 0.1em;
+}
+p,
+h4 {
+  font-size: 0.85em;
+  padding: 0.3em 0.3em;
+}
+
+h4 {
+  font-style: italic;
+}
+
+div[role="article"] {
+  background-color: #a18d75;
+}
+
+header {
+  grid-area: header;
+  padding: 0.6em;
+  background-color: #a18d75;
+}
+
+main {
+  grid-area: rules;
+  margin: 0em 0em 0.6em 0em;
+}
+
+section {
+  grid-area: section;
+  margin: 0.6em 0em 0.6em 0em;
+}
+
+a {
+  color: #694501;
+}
+
+aside {
+  grid-area: menu;
+}
+
+aside .wrapper {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right:50px;
+  background-color: #a18d75;
+  width: max-content;
+  align-self: center;
+  /* margin: 0.6em 0.6em;   */
+  display: flex;
+  flex-direction: column;
+}
+
 .page-wrapper {
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ccc;
-  padding: 1em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 99%
 }
+
+div[role="article"] {
+  padding: 0.3em;
+}
+
+.banner .summary{
+  
+}
+
+.summary {
+  margin-bottom: 0.6em;
+  width: 250px;
+ text-align: center;
+margin-left:110px;
+}
+
+li {
+  margin-left: 6em;
+  font-size: 0.6em;
+}
+
+aside li {
+  margin-left: 0em;
+  padding: 0.1em 0em;
+  list-style: none;
+  text-align: left;
+  font-weight: 4;
+}
+aside nav {
+  display: block;
+  width: fit-content;
+}
+
+aside a {
+  color: black;
+  /* text-shadow: 1px 1px 1px rgba(0,0,0,20); */
+  transition: font-size 0.3s;
+}
+
+aside a:hover {
+  font-size: 1.1em;
+  transform: translate(1em, 1em);
+}
+
+aside div {
+  padding: 0.6em;
+}
+
+.preamble h3,
+.explanation h3 {
+  margin-top: 0.2em;
+}
+
+.requirements[role="article"] {
+  padding-bottom: 0.6em;
+}
+.page-wrapper {
+  display: grid;
+  grid-template-areas:
+    "inspire bulb road"
+    "beauty  bulb road"
+    "summary bulb road"
+    "rules rules menu";
+}
+
+.page-wrapper::after {
+  content:"light";
+  grid-area: bulb;
+  margin-left: 75px;
+  border: solid 1px;
+   width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://i.ibb.co/JxNR3kb/image.png");
+}
+
+header {
+  /* Ignore header in the hierarchy */
+  display: contents;
+}
+header h1 {
+  grid-area: inspire;
+}
+header h2 {
+  grid-area: beauty;
+}
+/* Ignore intro so we can place children */
+section.intro {
+  display: contents;
+}
+.intro .summary {
+  grid-area: summary;
+}
+.preamble {
+  grid-area: road;
+  max-width: 250px;
+  margin-left: 20%;
+  margin-top: 40px;
+}
+.main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+
+/*off bulb https://i.ibb.co/RN2r0LG/image.png */
