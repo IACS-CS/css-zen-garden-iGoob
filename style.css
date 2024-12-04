@@ -33,6 +33,7 @@ abbr[title] {
 body {
   font-family: ;
   background-color: #a18d75;
+  text-align:center;
 }
 
 h1 {
@@ -51,7 +52,6 @@ h3 {
 }
 
 div[role="article"] h3 {
-  margin-left: 0.1em;
 }
 p,
 h4 {
@@ -69,7 +69,7 @@ div[role="article"] {
 
 header {
   grid-area: header;
-  padding: 0.6em;
+
   background-color: #a18d75;
 }
 
@@ -92,55 +92,51 @@ aside {
 }
 
 aside .wrapper {
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right:50px;
+  margin-top: 75px;
+  margin-left:50px;
   background-color: #a18d75;
   width: max-content;
   align-self: center;
   /* margin: 0.6em 0.6em;   */
   display: flex;
   flex-direction: column;
+  text-align:center;
 }
 
 .page-wrapper {
-  max-width: 99%
+
+  text-align:center;
 }
 
 div[role="article"] {
   padding: 0.3em;
 }
 
-.banner .summary{
-  
-}
+
 
 .summary {
   margin-bottom: 0.6em;
   width: 250px;
  text-align: center;
-margin-left:110px;
+
 }
 
 li {
-  margin-left: 6em;
-  font-size: 0.6em;
+ 
+  font-size: 0.68em;
+  list-style:none;
 }
 
-aside li {
-  margin-left: 0em;
-  padding: 0.1em 0em;
-  list-style: none;
-  text-align: left;
-  font-weight: 4;
-}
-aside nav {
-  display: block;
-  width: fit-content;
-}
+
+
+
 
 aside a {
   color: black;
+  text-align: center; 
+  display: inline-block; 
+  transition: font-size 0.3s;
+
   /* text-shadow: 1px 1px 1px rgba(0,0,0,20); */
   transition: font-size 0.3s;
 }
@@ -152,6 +148,7 @@ aside a:hover {
 
 aside div {
   padding: 0.6em;
+
 }
 
 .preamble h3,
@@ -207,12 +204,35 @@ section.intro {
   margin-top: 40px;
 }
 .main {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  max-width:600px;
+  padding-left:150px;
   
 
 }
+.requirements{
+  width:300px;
+  margin-left:145px;
+}
+
+
+aside li {
+margin-left:3px;
+  list-style: none;
+  font-weight: 4;
+  text-align:center;
+}
+
+
+aside nav {
+  display: block;
+  width: fit-content;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
 
 
 /*off bulb https://i.ibb.co/RN2r0LG/image.png */
