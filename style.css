@@ -1,14 +1,12 @@
 /********************************** 
-* Design by:  [your name]
-* Design name:  [your design name]
+* Design by:  [Joseph Burns]
+* Design name:  [Lights Out]
 * 
-* License: [license name - e.g. MIT if you want to let others
-* use the design with attribution, or All Rights Reserved if you
-* don't want others to use the design]
+* License: [MIT]
 * 
 * Acknowledgments/Sources:
-* - 
-* - 
+* - Seth Lupo
+* - Chat GPT
 * -
 */
 
@@ -21,6 +19,19 @@
 Started with copied CSS from  Seth Lupo 
 https://iacs-zen-garden.netlify.app/?authuser=0#seth-lupo-modernist-blocks
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 70px green;
+  }
+  to {
+    text-shadow: 0 0 80px greenyellow;
+  }
+}
+
+
 * {
   margin: 0%;
   padding: 0%;
@@ -31,24 +42,26 @@ abbr[title] {
 }
 
 body {
-  font-family: ;
+  font-family:"Bebas Neue", serif;
+  font-weight:400;
   background-color: #a18d75;
   text-align:center;
+  
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 4em;
   text-align: center;
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
   font-weight: 2;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
 div[role="article"] h3 {
@@ -57,6 +70,7 @@ p,
 h4 {
   font-size: 0.85em;
   padding: 0.3em 0.3em;
+ 
 }
 
 h4 {
@@ -64,7 +78,7 @@ h4 {
 }
 
 div[role="article"] {
-  background-color: #a18d75;
+  background-color:
 }
 
 header {
@@ -94,7 +108,6 @@ aside {
 aside .wrapper {
   margin-top: 75px;
   margin-left:50px;
-  background-color: #a18d75;
   width: max-content;
   align-self: center;
   /* margin: 0.6em 0.6em;   */
@@ -110,14 +123,16 @@ aside .wrapper {
 
 div[role="article"] {
   padding: 0.3em;
+  
 }
 
 
 
 .summary {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.em;
   width: 250px;
  text-align: center;
+ margin-left:175px;
 
 }
 
@@ -132,6 +147,7 @@ li {
 
 
 aside a {
+  
   color: black;
   text-align: center; 
   display: inline-block; 
@@ -142,8 +158,24 @@ aside a {
 }
 
 aside a:hover {
-  font-size: 1.1em;
-  transform: translate(1em, 1em);
+  font-size: 1.2em;
+  transform: scale(1.05);
+}
+.page-wrapper:has(header:hover) a {
+  color: greenyellow;
+  transition: background-color 1.5s ease, color 1.5s ease;
+  
+}
+.page-wrapper:has(header:hover){
+  background: black;
+  color:greenyellow;
+  transition: background-color 2s ease, color 2s ease;
+  /* -webkit-animation: glow 200ms ease-in-out infinite alternate;
+  -moz-animation: glow 200ms ease-in-out infinite alternate;
+  animation: glow 200ms ease-in-out infinite alternate; */
+
+
+
 }
 
 aside div {
@@ -153,11 +185,11 @@ aside div {
 
 .preamble h3,
 .explanation h3 {
-  margin-top: 0.2em;
+  margin-top: 0.1em;
 }
 
 .requirements[role="article"] {
-  padding-bottom: 0.6em;
+  padding-bottom: 0.em;
 }
 .page-wrapper {
   display: grid;
@@ -167,12 +199,15 @@ aside div {
     "summary bulb road"
     "rules rules menu";
 }
-
-.page-wrapper::after {
-  content:"light";
+header:hover::after {
+  background-image: url("https://i.ibb.co/RN2r0LG/image.png");
+ background-size:cover;
+ background-position: center;
+}
+header::after {
+  content:" ";
   grid-area: bulb;
   margin-left: 75px;
-  border: solid 1px;
    width: 300px;
   height: 300px;
   background-size: cover;
